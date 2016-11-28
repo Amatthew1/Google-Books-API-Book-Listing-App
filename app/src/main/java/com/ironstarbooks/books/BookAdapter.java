@@ -5,7 +5,7 @@ package com.ironstarbooks.books;
  */
 
 import android.app.Activity;
-import android.support.annotation.NonNull;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,14 +29,15 @@ public class BookAdapter extends ArrayAdapter<Book> {
         View listItemView = convertView;
 
         if (listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate((R.layout.activity_main), parent, false);
+            listItemView = LayoutInflater.from(getContext()).inflate((R.layout.activity_listing), parent, false);
         }
 
         final Book currentBook = getItem(position);
 
         TextView titleTextView = (TextView) listItemView.findViewById(R.id.title);
         String titleText = currentBook.getTitle();
-        titleTextView.setText("Title:" + " " + titleText);
+
+        titleTextView.setText(titleText);
 
 
         TextView authorTextView = (TextView) listItemView.findViewById(R.id.authors);
@@ -46,7 +47,7 @@ public class BookAdapter extends ArrayAdapter<Book> {
             authorStringBuilder.append(authorText.get(k));
             if (k < (authorText.size()) - 1) authorStringBuilder.append(",");
         }
-        authorTextView.setText("Author(s): " + " " + authorStringBuilder);
+        authorTextView.setText(authorStringBuilder);
 
 
         return listItemView;

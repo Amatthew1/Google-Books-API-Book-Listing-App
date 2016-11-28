@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Books</string>
+    <string name="welcome">Welcome to the GoogleBooks book-listing app</string>
+    <string name="find_books">Find Books</string>
+    <string name="hint">Please enter a term or phrase for search</string>
+    <string name="begin">Begin Below</string>
+    <string name="explain">This application uses the Google Books API to fetch and display books found by query. The listings include title and author(s)</string>
+    <string name="title">Title: </string>
+    <string name="authors">Authors: </string>
+    <string name="no_internet">No Internet</string>
+    <string name="no_books">No books found</string>
+
+
 </resources>

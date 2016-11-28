@@ -1,24 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/text_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TITLE"
+        android:gravity="center"
+        android:text="@string/welcome"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:gravity="center"
+        android:text="@string/explain" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center_horizontal"
+        android:text="@string/begin" />
+
+    <EditText
+        android:id="@+id/edit_query"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:hint="@string/hint"
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/authors"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Authors"
-        android:textSize="16sp" />
+        android:layout_margin="16dp"
+        android:background="#666666"
+        android:gravity="center_horizontal"
+        android:onClick="getBooks"
+        android:padding="16dp"
+        android:text="@string/find_books"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
 
 </LinearLayout>

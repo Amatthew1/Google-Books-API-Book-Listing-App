@@ -138,12 +138,15 @@ public final class QueryUtils {
 
                 String title = volumeInfo.getString("title");
 
-                JSONArray authors = volumeInfo.getJSONArray("authors");
-                List<String> authorList = new ArrayList<String>();
-                for (int j = 0; j < authors.length(); j++) {
-                    authorList.add(authors.getString(j));
-                }
+                List<String> authorList = new ArrayList<>();
 
+                if (volumeInfo.has("authors")) {
+                JSONArray authors = volumeInfo.getJSONArray("authors");
+
+                    for (int j = 0; j < authors.length(); j++) {
+                        authorList.add(authors.getString(j));
+                    }
+                }
 
                 Book book = new Book(title, authorList);
 
